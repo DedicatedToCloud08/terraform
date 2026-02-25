@@ -1,0 +1,5 @@
+environment = "ENV (Project is only configured to handle prod/dev. Make changes to the versions.tf locals block to consider more)" 
+vpc_cidr = "YOUR_VPC_CIDR"
+subnet_cidr = "YOUR_SUBNET_CIDR"
+adminPc = "YOUR-IP_ADDRESS-HERE"
+key_path = "YOUR-KEY-PATH_HERE"

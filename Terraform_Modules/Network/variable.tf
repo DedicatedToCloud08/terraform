@@ -9,7 +9,3 @@ variable "environment" {
 variable "subnet_cidr" {
   description = "subnet CIDR"
 }
-
-variable "availibilty_zone_lastletter" {
-  description = "The availibility zone to deploy subnet in just the last letter"
-}

@@ -1,3 +1,7 @@
+locals {
+  region = var.environment == "prod" ? "us-east-2" : "us-east-1"
+}
+
 resource "aws_vpc" "vpc" {
   cidr_block = var.vpc_cidr
   enable_dns_hostnames = true
@@ -11,6 +15,7 @@ resource "aws_vpc" "vpc" {
 resource "aws_subnet" "subnet" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = var.subnet_cidr
+  availability_zone = "${local.region}a"
   map_public_ip_on_launch = true
 
   tags = {
